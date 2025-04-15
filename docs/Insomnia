@@ -1,0 +1,276 @@
+type: collection.insomnia.rest/5.0
+name: Prova estacionamento
+meta:
+  id: wrk_384a4ad0eaf14af787ed161c6b0357c7
+  created: 1744738839379
+  modified: 1744738839379
+collection:
+  - name: Automovel
+    meta:
+      id: fld_d066e8a7f73a4f139d7c6f90fb2b74b8
+      created: 1744738852175
+      modified: 1744738879629
+      sortKey: -1744738852175
+    children:
+      - url: http://localhost:3001/automoveis
+        name: READ
+        meta:
+          id: req_ae8f50a84b4e4336b8df3485bc690e62
+          created: 1744738856476
+          modified: 1744739000073
+          isPrivate: false
+          sortKey: -1744738860586
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automoveis/BGJK-990
+        name: READONE
+        meta:
+          id: req_bfcc014818414f8d947c1e59258a89e8
+          created: 1744738858188
+          modified: 1744741497624
+          isPrivate: false
+          sortKey: -1744738860536
+        method: GET
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automoveis/BGJK-990
+        name: UPDATE
+        meta:
+          id: req_8ef33b75a5b14c6898f992f8a06059c3
+          created: 1744738859269
+          modified: 1744742107302
+          isPrivate: false
+          sortKey: -1744738859269
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"proprietario": "Fernando"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automoveis
+        name: CREATE
+        meta:
+          id: req_4fdbc93328944b3aa50d47e8e9d257a9
+          created: 1744738860486
+          modified: 1744745027185
+          isPrivate: false
+          sortKey: -1744738860486
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"placa": "FGBR-000",
+            		"proprietario": "Justo",
+            		"tipo": "carro",
+            		"modelo": "Panamera",
+            		"marca": "Porsche",
+            		"telefone": "19977770027"
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automoveis/ZTFH-546
+        name: DELETE
+        meta:
+          id: req_e8c3b667bc074aa9a0a324a84b38d08e
+          created: 1744738910540
+          modified: 1744742140997
+          isPrivate: false
+          sortKey: -1744738859169
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Estadia
+    meta:
+      id: fld_700103a3e2eb448fba493166dd9995f1
+      created: 1744742381335
+      modified: 1744742381335
+      sortKey: -1744742381335
+    children:
+      - url: http://localhost:3001/estadias/9
+        name: DELETE
+        meta:
+          id: req_a5347dfc7ff341fb980a14c7b1c8a979
+          created: 1744742386353
+          modified: 1744744566035
+          isPrivate: false
+          sortKey: -1744742386353
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadias/6
+        name: UPDATE
+        meta:
+          id: req_d1bb9ed7c6e7490d9c2e9688e711b180
+          created: 1744742387783
+          modified: 1744744621471
+          isPrivate: false
+          sortKey: -1744742387783
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "saida": "2025-04-15T21:00:00.000Z"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadias
+        name: CREATE
+        meta:
+          id: req_beb2f0a638ba4366a3577200415d65f8
+          created: 1744742389451
+          modified: 1744744544797
+          isPrivate: false
+          sortKey: -1744742389451
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"placa":"FGBR-990",
+              "valorHora":9.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadias/1
+        name: READONE
+        meta:
+          id: req_707c9d62492f4bdb88f18597ad3ad9f1
+          created: 1744742391501
+          modified: 1744743845265
+          isPrivate: false
+          sortKey: -1744742391501
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadias
+        name: READ
+        meta:
+          id: req_725215feef0b435bb4b077c8af4926d8
+          created: 1744742393351
+          modified: 1744742467303
+          isPrivate: false
+          sortKey: -1744742393351
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1df7fd49125670d82848589308fc802fa1297230
+    created: 1744738839390
+    modified: 1744738839390
+environments:
+  name: Base Environment
+  meta:
+    id: env_1df7fd49125670d82848589308fc802fa1297230
+    created: 1744738839384
+    modified: 1744738839384
+    isPrivate: false
